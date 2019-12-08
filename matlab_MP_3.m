@@ -14,18 +14,17 @@ for ctr =1:1:10
     errorvector_norm = norm(e);
     if errorvector_norm < least
         least = errorvector_norm;
-        bestfit = p;
+        BestFit_Polynomial = p;
     end
 end
 x3 = min(x):0.01:max(x);
-y3 = polyval(bestfit,x3);
+y3 = polyval(BestFit_Polynomial,x3);
 plot(x,y,'-o')
 hold on 
 plot(x3,y3,'-');
 title('Polynomial Regression')
 legend('Data points','Polynomial Curve')
 hold off
-bestfit
-
+BestFit_Polynomial
 
 end
