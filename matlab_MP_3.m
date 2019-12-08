@@ -4,6 +4,7 @@ y = component(:,2);
 least = inf;
 format short g
 
+%--for checking the best polynomial fit from 1-10th degree--%
 for ctr =1:1:10
     if ctr >= length(x)
         break
@@ -17,6 +18,7 @@ for ctr =1:1:10
         BestFit_Polynomial = p;
     end
 end
+%--plotting--%
 x3 = min(x):0.01:max(x);
 y3 = polyval(BestFit_Polynomial,x3);
 plot(x,y,'-o')
