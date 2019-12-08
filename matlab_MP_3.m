@@ -4,7 +4,6 @@ y = component(:,2);
 least = inf;
 format short g
 
-
 for ctr =1:1:10
     if ctr >= length(x)
         break
@@ -20,11 +19,11 @@ for ctr =1:1:10
 end
 x3 = min(x):0.01:max(x);
 y3 = polyval(bestfit,x3);
-plot(x,y,'-*')
+plot(x,y,'-o')
 hold on 
 plot(x3,y3,'-');
 title('Polynomial Regression')
-legend('Data points','Polynimial Curve')
+legend('Data points','Polynomial Curve')
 hold off
 bestfit
 
